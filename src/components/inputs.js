@@ -11,6 +11,7 @@ const Input = () => {
    </select>
    <input type='text'/>
    <button>=</button>
+   <box>Result</box>
  </div> 
 }
 
