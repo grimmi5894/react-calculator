@@ -1,18 +1,15 @@
-import React from "react"
+import React, {useState} from "react"
 
 const Input = () => {
- return <div>
-   <input type='text'/>
-   <select>
-     <option>+</option>
-     <option>-</option>
-     <option>*</option>
-     <option>/</option>
-   </select>
-   <input type='text'/>
-   <button>=</button>
-   <box>Result</box>
- </div> 
+  const [num, setNum] = useState(0)
+
+  const handleNum = event => {
+    setNum(event.target.value)
+  }
+    return (<div>
+   <input type='text' onChange={handleNum}/>
+   <div>{num}</div>
+ </div>) 
 }
 
 export default Input
